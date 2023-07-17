@@ -6,8 +6,6 @@ function choose() {
      createGrid(v);
 }
 
-
-
 function createGrid(v) {
     for (let i = 0; i < v; i++){
         const row = document.createElement('div');
