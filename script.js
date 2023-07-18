@@ -3,7 +3,16 @@ const container = document.querySelector("#container")
 function choose() {
      const input = prompt("how big of a grid do you want?");
      v = input;
-     createGrid(v);
+     if (v > 100){
+        choose();
+     } else {
+        reset();
+        createGrid(v)
+     }
+}
+
+function reset() {
+    container.innerHTML= "";
 }
 
 function createGrid(v) {
@@ -21,5 +30,3 @@ function createGrid(v) {
         container.appendChild(row);
     }
 }
-
-
